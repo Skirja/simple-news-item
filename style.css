@@ -135,6 +135,26 @@ table {
     border-spacing: 0;
 }
 
+/* FLOAT CLEAR */
+ .cf:before,
+ .cf:after {
+     content: " "; 
+     display: table;
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ .cf {
+     *zoom: 1;
+ }
+
+
+
+
+
+
 /* STYLE */
 
 body {
@@ -143,7 +163,7 @@ body {
 }
 
 .container {
-    width: 980px;
+    width: 1020px;
     margin: auto;
     background-color: white;
 }
@@ -194,8 +214,12 @@ body {
 }
 
 .content {
+    width: 580px;
     padding: 25px;
+    box-sizing: border-box;
+    float: left;
 }
+
 
 .content h2 {
     font-size: 26px;
@@ -220,6 +244,28 @@ body {
     margin-bottom: 15px;
     text-align: justify;
     font-size: 16px;
+}
+
+.sidebar {
+    width: 400px;
+    float: right;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.sidebar img {
+    padding-right: 9px;
+    width: 80px;
+    float: left;
+    margin-top: 5px;
+}
+
+.sidebar .biodata {
+ font-size: 13px;
 }
 
 .footer {
